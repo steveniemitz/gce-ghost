@@ -23,9 +23,7 @@ sudo update-rc.d ghost enable
 
 sudo apt-get install nginx -yq
 
-curl https://raw.githubusercontent.com/steveniemitz/gce-ghost/master/ghost.conf -o ~/ghost.conf.tmp
-read -p "Enter the server's hostname: " ghosthost
-sed "s/example.com/$ghosthost/" ~/ghost.conf.tmp > ~/ghost.conf
+curl https://raw.githubusercontent.com/steveniemitz/gce-ghost/master/ghost.conf -o ~/ghost.conf
 sudo mv ~/ghost.conf /etc/nginx/sites-available/ghost.conf
 sudo ln -s /etc/nginx/sites-available/ghost.conf /etc/nginx/sites-enabled/ghost.conf
 sudo service nginx restart
