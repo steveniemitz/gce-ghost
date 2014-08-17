@@ -27,6 +27,5 @@ curl https://raw.githubusercontent.com/steveniemitz/gce-ghost/master/ghost.conf 
 read -p "Enter the server's hostname: " ghosthost
 sed "s/example.com/$ghosthost/" ~/ghost.conf.tmp > ~/ghost.conf
 sudo mv ~/ghost.conf /etc/nginx/sites-available/ghost.conf
-sudo ln -s /etc/nginx/sites-available/ghost.conf /etc/nginx/sites-enabled/g
-host.conf
+sudo ln -s /etc/nginx/sites-available/ghost.conf /etc/nginx/sites-enabled/ghost.conf
 sudo service nginx restart
