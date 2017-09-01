@@ -11,7 +11,7 @@ rm ghost.zip
 sudo chown -R ghost:ghost /var/www/ghost
 sudo apt-get install nodejs -yq
 sudo update-alternatives --install /usr/bin/node nodejs /usr/bin/nodejs 100
-curl https://www.npmjs.org/install.sh | sudo sh
+curl -L https://www.npmjs.org/install.sh | sudo sh
 sudo apt-get install build-essential -yq
 cd /var/www/ghost
 sudo npm install --production
